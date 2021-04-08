@@ -5,7 +5,7 @@ close all
 clc
 
 p = 100;    %dimension
-sparsity = 0.1;   %sparsity = 10p£ºp = 20 0.7; p = 50; 0.2; p = 100; 0.1; p = 200; 0.05
+sparsity = 0.1;   %sparsity = 10pÂ£Âºp = 20 0.7; p = 50; 0.2; p = 100; 0.1; p = 200; 0.05
 K = 8;   %number of different orders of atom type
 mse = zeros(6,K); %RMSE
 beta = zeros(6,K); %interaction correlation
@@ -19,16 +19,16 @@ for a = 1:K
     [r_samples,S,X0,Y0] = generate_samples(a,p,Xrt,samplenumber);   
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     %solve the problem by CARGO
-%     nu = p+1;
-%     c = 1;
-%     B_prior = c * eye(p);
-%     [B,T,obj_inner,obj_outer,X_Y]= CARGO(X0, Xr,Y0, S, p,Ty,nu,B_prior);
+     nu = p+1;
+     c = 1;
+     B_prior = c * eye(p);
+     [B,T,obj_inner,obj_outer,X_Y]= CARGO(X0, Xr,Y0, S, p,Ty,nu,B_prior);
     
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     %solve the problem by Graphical Lasso
-     rho = 0.005;  %p = 50 0.01 p = 100 0.005 p = 20 0.001
-     [T,T1] = G_lasso(S, rho);
-    % [T,T1] = graphical_lasso_1(S,rho,maxIt,tol)
+    % rho = 0.005;  %p = 50 0.01 p = 100 0.005 p = 20 0.001
+    % [T,T1] = G_lasso(S, rho);
+   
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     %solve the problem by PDFPPA
     %[X,T] = PDFPPA(X0, Xr, Y0, S, p);
