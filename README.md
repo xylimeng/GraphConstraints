@@ -1,4 +1,4 @@
 # GraphConstraints
-Sparse inverse covariance estimation with graph constraints
+Bayesian conditional autoregressive models with graphconstraints for magnetic moment interaction in highentropy alloys
 
-The script `main.m` demonstrates how to simulate data and carry out the estimation using a penalty decomposition proximal modification of the Gauss-Seidel algorithm. 
+The script `Demo-simulations.m` demonstrates how to simulate data and carry out the estimation using CARGO. 
