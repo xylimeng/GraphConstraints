@@ -5,4 +5,4 @@ The script `Demo_simulations.m` demonstrates how to simulate data and carry out 
 
 The provided function `CARGO.m` is applicable for general graphical models with graph constraints. 
 
-Visualization of POSCAR and VESTA files can be done in VESTA (https://jp-minerals.org/vesta/)
+Visualization of POSCAR and VESTA files can be done in VESTA (https://jp-minerals.org/vesta/).
